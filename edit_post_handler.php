@@ -13,8 +13,7 @@
     	$content = mysql_real_escape_string($_POST['content']); 
   		$post_id = mysql_real_escape_string($_POST['post_id']); 
 
-    	$sql = "UPDATE blog_posts SET (title, post) VALUES ('$title','$content') WHERE id = '$post_id'";   
-    	echo $sql;
+    	$sql = "UPDATE blog_posts SET title='$title', post='$content' WHERE id = '$post_id'";   
     	$query = mysql_query($sql); 
 		header("location:index.php");
 	}
