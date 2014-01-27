@@ -2,11 +2,9 @@
 include 'blogpost.php';
 include 'dbconn.php';
 
-function GetBlogPosts($id=null, $tagId= null) {
+function getBlogPosts($id=null) {
 	if(!empty($id)) {
-		$query = mysql_query("SELECT * FROM blog_posts WHERE id = " . $id . " ORDER BY id DESC LIMIT 10");
-	} else if (!empty($tagId)) {
-		$query = mysql_query("SELECT blog_posts.* FROM blog_post_tags LEFT JOIN (blog_posts) ON (blog_post_tags.postID = blog_posts.id) WHERE blog_post_tags.tagID =" . $tagID . " ORDER BY blog_posts.id DESC LIMIT 10");
+		$query = mysql_query("SELECT * FROM blog_posts WHERE id ='$id'");
 	} else {
 		$query = mysql_query("SELECT * FROM blog_posts ORDER BY id DESC LIMIT 10");
 	}	

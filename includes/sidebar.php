@@ -20,10 +20,13 @@
     <div class="side_recent_body">
       <p>
         <ol class="recent_posts">
-          <?php foreach ($blogPosts as $recentPost) { ?>
+          <?php 
+          $recentPosts = getBlogPosts();
+          foreach ($recentPosts as $recentPost) { 
+          ?>
             <li>
               <div class="recent_post_title">
-                <h4><?php echo $recentPost->title ?></h4>
+                <h4><a href="view_post.php?id=<?php echo $recentPost->id ?>"><?php  echo $recentPost->title; ?></a></h4>
               </div>
               <div class="recent_post_timestamp">
                 <?php echo $recentPost->datePosted ?>

@@ -11,7 +11,6 @@
 		<?php 
 		include ('includes/includes.php');
 		include('includes/header.php');
-		$blogPosts = GetBlogPosts();
 		?>
 		<div class="body"> 
 			<div class="main">  

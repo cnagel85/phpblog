@@ -9,7 +9,7 @@
             </div>
             <div class='post_title'>
                 <div class='title_box'>
-                    <h2><?php  echo $post->title; ?></h2>
+                    <h2><a href="view_post.php?id=<?php echo $post->id ?>"><?php  echo $post->title; ?></a></h2>
                 </div>
                 <div>
                     <ul> 
@@ -21,7 +21,7 @@
                         <li><?php echo "<a href='mailto:" . $post->authorEmail . "'>" . $post->authorEmail . "</a>"; ?></li>
                         <?php if ($signedIn & ($currentUser == $post->authorId)) { ?>
                             <li>Post Controls:</li>
-                            <li><a href="#">Edit</a></li>
+                            <li><a href="edit_post.php?id=<?php echo $post->id ?>">Edit</a></li>
                             <li><form action="delete_post_handler.php" method="POST" onsubmit="return confirm('Are you sure?')">
                                     <input type="hidden" name="post_id" value="<?php echo $post->id; ?>">
                                     <input type="submit" name="delete" value="Delete" confirmation="Are you sure?">

@@ -1,3 +1,6 @@
+<?php 
+ 
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,9 +12,9 @@
 </head>
 	<body>
 		<?php 
-		include ('includes/includes.php');
-		include('includes/header.php');
-		$blogPosts = getBlogPosts();
+			include ('includes/includes.php');
+			include('includes/header.php'); 
+ 			$blogPosts = getBlogPosts($_GET['id']);
 		?>
 		<div class="body"> 
 			<div class="main">  
@@ -24,5 +27,3 @@
 		<?php include ('includes/footer.php'); ?>
 	</body>
 </html>
-
-
