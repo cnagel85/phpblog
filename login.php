@@ -51,7 +51,7 @@
 	<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<title>Corey Elliot Nagel</title>
+	<title>Corey Nagel - Sign In</title>
 </head>
 	<body>
 		<?php 

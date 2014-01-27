@@ -36,4 +36,17 @@ function isSignedIn() {
 		}
 	}
 }
+
+function getCurrentUserId() {
+	if(isset($_COOKIE['ID_my_site']) ) {
+		$username = $_COOKIE['ID_my_site'];
+		$query = mysql_query("SELECT id FROM people WHERE username = '$username'")or die(mysql_error()); 
+		$result = mysql_fetch_array($query);
+		return $result['id'];
+	}
+
+}
+	
+$signedIn = isSignedIn();
+
 ?>
