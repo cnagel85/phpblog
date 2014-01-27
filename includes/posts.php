@@ -19,6 +19,15 @@
                         <li class="post_date"><?php echo $post->datePosted;?></li>
                         <li>Email:</li>
                         <li><?php echo "<a href='mailto:" . $post->authorEmail . "'>" . $post->authorEmail . "</a>"; ?></li>
+                        <?php if ($signedIn & ($currentUser == $post->authorId)) { ?>
+                            <li>Post Controls:</li>
+                            <li><a href="#">Edit</a></li>
+                            <li><form action="delete_post_handler.php" method="POST" onsubmit="return confirm('Are you sure?')">
+                                    <input type="hidden" name="post_id" value="<?php echo $post->id; ?>">
+                                    <input type="submit" name="delete" value="Delete" confirmation="Are you sure?">
+                                </form>
+                            </li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>

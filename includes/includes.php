@@ -48,5 +48,6 @@ function getCurrentUserId() {
 }
 	
 $signedIn = isSignedIn();
+$currentUser = getCurrentUserId();
 
 ?>

@@ -2,7 +2,6 @@
 include ('includes/includes.php'); 
 if (!$signedIn) 
 	header('location:login.php');
-$currentUser = getCurrentUserId();
 ?>
 <!DOCTYPE html>
 <html>

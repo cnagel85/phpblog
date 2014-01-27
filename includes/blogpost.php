@@ -4,6 +4,7 @@ class BlogPost
 	public $id;
 	public $title;
 	public $post;
+	public $authorId;
 	public $author;
 	public $authorEmail;
 	public $DatePosted;
@@ -23,6 +24,7 @@ class BlogPost
 		}
 
 		if (!empty($authorId)) {
+			$this->authorId = $authorId;
 			$query = mysql_query("SELECT first_name, last_name, email FROM people WHERE id = " . $authorId);
 			$row = mysql_fetch_assoc($query);
 			$this->author = $row["first_name"] . " " . $row["last_name"];
