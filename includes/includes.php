@@ -17,6 +17,16 @@ function getBlogPosts($id=null) {
 	return $postArray;
 }
 
+function getAllPosts() {
+	$query = mysql_query("SELECT * FROM blog_posts ORDER BY id DESC");
+	$allPosts = array();
+	while($row = mysql_fetch_assoc($query)) {
+		$post = new BlogPost($row["id"], $row['title'], $row['post'], $row['author_id'], $row['date_posted']);
+		array_push($allPosts, $post);
+	}
+	return $allPosts;
+}
+
 function isSignedIn() {
 	
 	if(isset($_COOKIE['ID_my_site'])) { 

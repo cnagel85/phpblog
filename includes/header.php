@@ -6,6 +6,7 @@
     <div class="link_bar">
         <ul>
           <li><a href="index.php">Blog</a></li>
+          <li><a href="allposts.php">All Posts</a></li>
           <li><a href="projects.php">Projects</a></li>
           <li><a href="about.php">About Me</a></li>
           <li><a href="contact.php">Hire/Contact Me</a></li>

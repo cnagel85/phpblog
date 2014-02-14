@@ -285,6 +285,23 @@ body {
   font-size: .85em;
 }
 
+.post_controls {
+  list-style-type: none;
+  white-space:nowrap;
+  clear:both;
+  margin-left:-20%;
+  margin-bottom:-8%;
+  color:#00527D;
+  font-size: .75em;
+  width:40%;
+}
+.post_controls li {
+  padding:1%;
+  margin-left:10%;
+  margin-right:0%;
+  display:inline-block;
+}
+
 /* Footer */
 
 .footer {
